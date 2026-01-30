@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Guns & Settings Guide</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#60a5fa; --accent-2:#7c3aed;
+      --glass: rgba(255,255,255,0.02);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: #e6eef8;
+    }
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#071026 120%);-webkit-font-smoothing:antialiased}
+    .container{max-width:1100px;margin:28px auto;padding:20px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+    h1{font-size:20px;margin:0;color:var(--accent)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:12px;font-size:14px}
+    nav a:hover{color:var(--accent)}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    .card{background:linear-gradient(180deg,var(--card),#071226);padding:16px;border-radius:12px;box-shadow:0 6px 24px rgba(3,7,18,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .card h2{margin-top:0;color:var(--accent-2);font-size:16px}
+    .muted{color:var(--muted);font-size:13px;margin-bottom:8px}
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    th,td{padding:8px 10px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.03);font-size:14px}
+    th{color:var(--accent);font-weight:600}
+    ul{padding-left:18px;margin:8px 0}
+    .section{margin-bottom:12px}
+    .small{font-size:13px;color:var(--muted)}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; font-size:13px}
+    pre.code{background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;overflow:auto}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+    @media (max-width:980px){ .grid{grid-template-columns:1fr} nav{display:none} }
+    .tag{display:inline-block;background:rgba(255,255,255,0.03);padding:4px 8px;border-radius:999px;color:var(--muted);font-size:12px;margin:4px 6px 4px 0}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Guns & Settings Guide</h1>
+        <div class="small muted">Neatly formatted reference of attachments, gun notes, tech and settings.</div>
+      </div>
+      <nav>
+        <a href="#attachments">Attachments</a>
+        <a href="#guns">Guns</a>
+        <a href="#tech">Tech & Tactics</a>
+        <a href="#monitor">Monitor</a>
+        <a href="#graphics">Graphics</a>
+        <a href="#audio">Audio</a>
+        <a href="#publish">Publish (GitHub Pages)</a>
+      </nav>
+    </header>
+
+    <div class="grid">
+      <main class="card" id="content">
+        <section id="attachments" class="section">
+          <h2>Attachment Cheat Sheet</h2>
+          <div class="muted">Attachment → Best-in-slot guns</div>
+          <table aria-label="Attachment cheat sheet">
+            <thead><tr><th>Attachment</th><th>Guns</th></tr></thead>
+            <tbody>
+              <tr><td>Muzzle Break</td><td>Torrente</td></tr>
+              <tr><td>Green Stock</td><td>Renegade</td></tr>
+              <tr><td>Extended Barrel (Pink)</td><td>Renegade, Anvil, Ferro</td></tr>
+              <tr><td>Silencer</td><td>Renegade, Ferro, Anvil, Torrente</td></tr>
+              <tr><td>Compensator</td><td>Bobcat, Stitcher, Tempest, Anvil</td></tr>
+              <tr><td>Green Angled</td><td>Tempest, Venator</td></tr>
+              <tr><td>Blue Angled / Horizontal (Pink)</td><td>Bobcat, Stitcher, Vulcano</td></tr>
+              <tr><td>Lightweight Stock (Pink)</td><td>Bobcat, Stitcher, Ferro, Vulcano, Toro</td></tr>
+              <tr><td>Kinetic Converter</td><td>Bobcat, Stitcher, Vulcano, Torrente</td></tr>
+            </tbody>
+          </table>
+          <p class="small muted">Notes: attachments listed are best-in-slot. If a gun lists blue angled it can still use green angled — but if it lists green angled it shouldn't use blue. Blue grips reduce ADS speed by 30% while giving +10% recoil (relevant at medium ranges).</p>
+        </section>
+
+        <section id="guns" class="section">
+          <h2>Gun Notes (assume level 4)</h2>
+
+          <article>
+            <h3 class="mono">Renegade — <span class="tag">Green Stock</span> <span class="tag">Silencer / Extended</span></h3>
+            <ul>
+              <li>Medium/long range beam. TTK is relatively slow but performs at relevant ranges.</li>
+              <li>Has recoil but not high firerate. Green stock helps bloom/recovery; blue stock reduces recoil recovery but is usually not worth it.</li>
+              <li>Compensator/muzzle break not needed. Prefer silencer or extended barrel.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3 class="mono">Il Toro — <span class="tag">Lightweight Stock</span> <span class="tag">Choke</span></h3>
+            <ul>
+              <li>Close range only; do not ADS.</li>
+              <li>Choke greatly reduces base bloom — increases effective range.</li>
+              <li>High recoil but low firerate so recoil doesn't matter; stocks other than lightweight are wasteful. Lightweight gives very strong handling buff.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3 class="mono">Venator — <span class="tag">Green Angled</span></h3>
+            <ul>
+              <li>Very fast TTK to close/medium. Don't ADS at close range.</li>
+              <li>Noticeable horizontal recoil. At medium ranges you'll ADS, so blue angled is not worth it.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3 class="mono">Vulcano — <span class="tag">Pink/Blue Angled</span> <span class="tag">Choke</span> <span class="tag">Kinetic Converter</span></h3>
+            <ul>
+              <li>Close range only; best bodyshot TTK. Do not ADS.</li>
+              <li>Choke reduces base bloom. High firerate and horizontal recoil — angled grip preferred (blue acceptable since not ADSing).</li>
+              <li>Lightweight stock is decent. Kinetic converter trades recoil for firerate (recommended).</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3 class="mono">Tempest — <span class="tag">Compensator</span> <span class="tag">Green Angled</span></h3>
+            <ul>
+              <li>Solid TTK to close/medium. Fast firerate and high bloom growth — compensator extends effective range.</li>
+              <li>Both horizontal and vertical recoil present; angled grip preferred. Because it's used at medium ranges where you ADS, avoid blue grips.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3 class="mono">Torrente — <span class="tag">Kinetic Converter / Lightweight</span> <span class="tag">Silencer / Muzzle Break</span></h3>
+            <ul>
+              <li>Close range only; do not ADS. Excellent bodyshot TTK; headshots are RNG due to bloom.</li>
+              <li>Vertical recoil present; muzzle break helps slightly. Leave stock empty unless lightweight or kinetic is available.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3 class="mono">Bobcat & Stitcher — <span class="tag">Compensator</span> <span class="tag">Pink/Blue Angled</span> <span class="tag">Lightweight / Kinetic</span></h3>
+            <ul>
+              <li>Small base bloom that ADS reduces slightly; very high firerate and bloom growth so close range only.</li>
+              <li>Compensator is obvious; angled grip is preferred due to horizontal recoil. High-level grips acceptable because these guns are rarely ADSed.</li>
+              <li>Lightweight or kinetic are both strong choices.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3 class="mono">Anvil — <span class="tag">Compensator / Silencer / Extended</span></h3>
+            <ul>
+              <li>No grip slot. High per-shot bloom that doesn't reset fast; not suited for DPS brawls.</li>
+              <li>Compensator helps skilled players with faster follow-up shots; others should prefer silencer or extended barrel and avoid close-range DPS fights.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3 class="mono">Ferro — <span class="tag">Silencer / Extended</span> <span class="tag">Lightweight</span></h3>
+            <ul>
+              <li>High base dispersion; ADSing significantly improves accuracy. Recoil/bloom don't matter much because of reload cadence.</li>
+              <li>Use lightweight stock to improve mobility; grips/other stocks are mostly pointless.</li>
+            </ul>
+          </article>
+
+          <p class="small muted">General gun rules: guns are noted at level 4. It's usually better to bring a weaker gun that is level 4 than a "better" gun at level 1–3. Recycle/sell unnecessary attachments (shotgun silencer, vertical grips, padded stock, blue stock, anvil splitter). Don't put unnecessary attachments on guns — recycle them.</p>
+        </section>
+
+        <section id="tech" class="section">
+          <h2>Tech & Tactics</h2>
+          <ul>
+            <li>Shotguns do no extra headshot damage — aim for body.</li>
+            <li>If a teammate pings an enemy you can't see, shoot at the ping (useful in dark/bushy areas).</li>
+            <li>If an Anvil/Ferro shot doesn't pop a shield, it was a medium/heavy shield.</li>
+            <li>Arc usually can't see through bushes/smoke unless already in red mode; sprinting affects it strongly.</li>
+            <li>Dodge-roll recovery can be canceled by crouching — allows faster shooting after a roll.</li>
+            <li>You can cancel equip/unequip animation with dodge-rolling. A fast switch technique: press to equip, instantly dodge, hold crouch, and tap-fire (spam M1) to begin shooting quickly.</li>
+            <li>Do not wear backpacks with light strips — they reveal you.</li>
+            <li>Bullets originate from the barrel position; you can sometimes shoot without exposing character model. Hip-fire benefits from barrel offset.</li>
+            <li>Dodging off a ledge then dodging at the bottom is faster than jumping then dodging from the bottom — you can shoot faster while avoiding some fall damage.</li>
+          </ul>
+        </section>
+
+        <section id="monitor" class="section">
+          <h2>Monitor</h2>
+          <ul>
+            <li>Enable any "shadow boost" / "black equalizer" / "dark boost" feature — improves dark-visibility without destroying image.</li>
+            <li>If you need more visibility, adjust gamma (lower gamma can help), then raise contrast slightly. If monitor lacks gamma/contrast, adjust in the GPU control panel.</li>
+          </ul>
+        </section>
+
+        <section id="graphics" class="section">
+          <h2>Graphics (NVIDIA)</h2>
+          <div class="small muted">Core settings summary</div>
+          <ul>
+            <li>Window: Borderless</li>
+            <li>Frame Gen: Off</li>
+            <li>Vsync: Off</li>
+            <li>Reflex: On (boost preferred)</li>
+            <li>Limit: Unlimited or ~10 frames below your average</li>
+            <li>Scaling Method: DLSS</li>
+            <li>Quality: Balance visibility vs FPS (Transformer model recommended on 40/50 series)</li>
+            <li>RTX: Static for max frames; High otherwise</li>
+            <li>View Distance: High</li>
+            <li>AA: Low</li>
+            <li>Shadow: High (competitive advantage)</li>
+            <li>Post: Low, Texture: High/Epic, Effects: Low, Reflections: Epic, Foliage: Low, Illumination: Low</li>
+            <li>Energy savings: off (especially if G-Sync enabled)</li>
+          </ul>
+          <p class="small muted">Tip: use the newer transformer DLSS model on modern cards for clearer images; older cards use CNN or older transformer.</p>
+        </section>
+
+        <section id="audio" class="section">
+          <h2>Audio</h2>
+          <ul>
+            <li>Night Mode: On — it normalizes audio levels so footsteps and quiet sounds become clearer relative to loud gunfire. Useful in quiet/more tactical play.</li>
+            <li>Night mode can be overstimulating for some players; try both and pick the one that gives clearer footsteps for you.</li>
+          </ul>
+        </section>
+
+        <section id="publish" class="section">
+          <h2>Publish: GitHub Pages</h2>
+          <p class="small muted">Instructions to host this single-file site on GitHub Pages. Two options: project site or user site.</p>
+
+          <h3 class="mono">Quick steps (project site)</h3>
+          <ol>
+            <li>Create a repository on GitHub (example: <code>my-guide</code>).</li>
+            <li>Place this file as <code>index.html</code> in the repository root (or in a <code>/docs</code> folder if you prefer).</li>
+            <li>Commit & push the file to the default branch (commonly <code>main</code>).</li>
+            <li>On GitHub: Repository → Settings → Pages. Under "Source" choose the branch (<code>main</code>) and root (or /docs) and Save.</li>
+            <li>Your site is then published at <code>https://&lt;username&gt;.github.io/&lt;repo&gt;/</code>. For a user site use a repo named <code>&lt;username&gt;.github.io</code> and the site will be <code>https://&lt;username&gt;.github.io/</code>.</li>
+          </ol>
+
+          <h3 class="mono">Command-line example</h3>
+          <pre class="code mono">
+git init
+git add index.html
+git commit -m "Initial site"
+git branch -M main
+git remote add origin git@github.com:YOUR_USERNAME/REPO_NAME.git
+git push -u origin main
+          </pre>
+
+          <p class="small muted">Alternative: create the repo on github.com and upload <code>index.html</code> via the web UI (Add file → Upload files) then use Settings → Pages to enable publishing.</p>
+
+          <h3 class="mono">Notes and extras</h3>
+          <ul>
+            <li>Project site URL format: <code>https://USERNAME.github.io/REPO_NAME/</code>.</li>
+            <li>User site: repository must be named <code>USERNAME.github.io</code>. The root <code>index.html</code> serves at <code>https://USERNAME.github.io/</code>.</li>
+            <li>If you prefer the site in <code>/docs</code> folder, select the branch + <code>/docs</code> in Pages settings.</li>
+            <li>If you want a custom domain, add a <code>CNAME</code> file to repo root or set it via Pages settings; also update DNS to point to GitHub Pages (A / CNAME records).</li>
+          </ul>
+        </section>
+      </main>
+
+      <aside class="card">
+        <h2>Quick Reference</h2>
+        <div class="muted">Top reminders</div>
+        <ul>
+          <li class="small">Blue grips: -30% ADS speed, +10% recoil. Avoid at medium ranges where ADS is used.</li>
+          <li class="small">Shotguns: aim body — no headshot bonus.</li>
+          <li class="small">Recycle: shotgun silencer, vertical grips, padded & blue stock, anvil splitter.</li>
+          <li class="small">Weapon equip/unequip can be canceled with dodge roll + crouch + tap-fire technique.</li>
+        </ul>
+
+        <h3 style="margin-top:12px">Files</h3>
+        <div class="muted small">What to commit</div>
+        <ul>
+          <li class="mono small">index.html — main site</li>
+          <li class="mono small">(optional) README.md — repo description</li>
+          <li class="mono small">(optional) CNAME — custom domain</li>
+        </ul>
+
+        <h3 style="margin-top:12px">License</h3>
+        <div class="small muted">Use as you like. Add attribution if you publish publicly.</div>
+
+        <footer>
+          <div class="small muted">Edit this file to add screenshots, images or extra sections. For images, commit them into an <code>assets/</code> folder and reference from HTML.</div>
+        </footer>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
