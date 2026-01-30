@@ -207,40 +207,6 @@
             <li>Night mode can be overstimulating for some players; try both and pick the one that gives clearer footsteps for you.</li>
           </ul>
         </section>
-
-        <section id="publish" class="section">
-          <h2>Publish: GitHub Pages</h2>
-          <p class="small muted">Instructions to host this single-file site on GitHub Pages. Two options: project site or user site.</p>
-
-          <h3 class="mono">Quick steps (project site)</h3>
-          <ol>
-            <li>Create a repository on GitHub (example: <code>my-guide</code>).</li>
-            <li>Place this file as <code>index.html</code> in the repository root (or in a <code>/docs</code> folder if you prefer).</li>
-            <li>Commit & push the file to the default branch (commonly <code>main</code>).</li>
-            <li>On GitHub: Repository → Settings → Pages. Under "Source" choose the branch (<code>main</code>) and root (or /docs) and Save.</li>
-            <li>Your site is then published at <code>https://&lt;username&gt;.github.io/&lt;repo&gt;/</code>. For a user site use a repo named <code>&lt;username&gt;.github.io</code> and the site will be <code>https://&lt;username&gt;.github.io/</code>.</li>
-          </ol>
-
-          <h3 class="mono">Command-line example</h3>
-          <pre class="code mono">
-git init
-git add index.html
-git commit -m "Initial site"
-git branch -M main
-git remote add origin git@github.com:YOUR_USERNAME/REPO_NAME.git
-git push -u origin main
-          </pre>
-
-          <p class="small muted">Alternative: create the repo on github.com and upload <code>index.html</code> via the web UI (Add file → Upload files) then use Settings → Pages to enable publishing.</p>
-
-          <h3 class="mono">Notes and extras</h3>
-          <ul>
-            <li>Project site URL format: <code>https://USERNAME.github.io/REPO_NAME/</code>.</li>
-            <li>User site: repository must be named <code>USERNAME.github.io</code>. The root <code>index.html</code> serves at <code>https://USERNAME.github.io/</code>.</li>
-            <li>If you prefer the site in <code>/docs</code> folder, select the branch + <code>/docs</code> in Pages settings.</li>
-            <li>If you want a custom domain, add a <code>CNAME</code> file to repo root or set it via Pages settings; also update DNS to point to GitHub Pages (A / CNAME records).</li>
-          </ul>
-        </section>
       </main>
 
       <aside class="card">
@@ -252,17 +218,6 @@ git push -u origin main
           <li class="small">Recycle: shotgun silencer, vertical grips, padded & blue stock, anvil splitter.</li>
           <li class="small">Weapon equip/unequip can be canceled with dodge roll + crouch + tap-fire technique.</li>
         </ul>
-
-        <h3 style="margin-top:12px">Files</h3>
-        <div class="muted small">What to commit</div>
-        <ul>
-          <li class="mono small">index.html — main site</li>
-          <li class="mono small">(optional) README.md — repo description</li>
-          <li class="mono small">(optional) CNAME — custom domain</li>
-        </ul>
-
-        <h3 style="margin-top:12px">License</h3>
-        <div class="small muted">Use as you like. Add attribution if you publish publicly.</div>
 
         <footer>
           <div class="small muted">Edit this file to add screenshots, images or extra sections. For images, commit them into an <code>assets/</code> folder and reference from HTML.</div>
